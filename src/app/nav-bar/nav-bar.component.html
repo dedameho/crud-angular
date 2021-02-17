@@ -1,0 +1,15 @@
+<nav class="indigo">
+  <div class="nav-wrapper">
+    <a routerLink="/" routerLinkActive="active" class="brand-logo"> CRUD</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ng-container *ngIf="isLoggedIn(); else elseTemplate">
+        <li><a routerLink="/add" routerLinkActive="active">Añadir Producto</a></li>
+        <li><a (click)="logOut()">Salir</a></li>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <li><a routerLink="/login" routerLinkActive="active">Entrar</a></li>
+        <li><a routerLink="/signup" routerLinkActive="active">Registrarse</a></li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>
