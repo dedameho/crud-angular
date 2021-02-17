@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IndexService } from './index.service';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private products:IndexService) { }
+  public productos=[]
   ngOnInit(): void {
+    this.products.getProducts().subscribe(res=>{
+      this.productos=res;
+      console.log(this.productos)
+    })
   }
 
 }

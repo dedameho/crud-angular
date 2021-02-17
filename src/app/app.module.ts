@@ -13,7 +13,8 @@ import { SignupComponent } from './signup/signup.component'
 import { SignupService } from './signup/signup.service';
 import { AuthGuard , GuardGuard } from './guard/auth.guard';
 import { AddComponent } from './add/add.component';
-import { TokenInterceptor } from './http.interceptor'
+import { TokenInterceptor } from './http.interceptor';
+import { IndexService } from './index/index.service'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { TokenInterceptor } from './http.interceptor'
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [LoginService,SignupService,AuthGuard,GuardGuard,{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
+  providers: [LoginService,SignupService,AuthGuard,GuardGuard,IndexService,{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
