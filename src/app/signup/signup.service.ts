@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SignupService {
-  url:string = 'http://localhost:3050/signup';
+  url:string = 'https://api.zoansoftware.com/signup';
   constructor(private http:HttpClient) { }
 
   signUp(name:string,last_name:string,email:string,password:string):Observable<any>{

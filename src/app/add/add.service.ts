@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AddService {
-  private url:string = 'http://localhost:3050/add'
+  private url:string = 'https://api.zoansoftware.com/add'
   constructor(private http:HttpClient) { }
   subirProducto(codigo:string,referencia:string,nombre:string,foto:File,ubicacion:string,sede_bodega:string,descripcion:string):Observable<any>{
     const formData = new FormData();

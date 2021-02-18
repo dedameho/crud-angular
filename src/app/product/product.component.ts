@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
       const productId = params.id;
       this.idProduct=productId;
       this.product.getProduct(this.idProduct).subscribe(res=>{
-        this.fotoProducto=`http://localhost:3050/${res[0].imagen}`;
+        this.fotoProducto=`https://api.zoansoftware.com/${res[0].imagen}`;
         this.productEdit.setValue({
           codigo:`${res[0].codigo}`,
           referencia:`${res[0].referencia}`,

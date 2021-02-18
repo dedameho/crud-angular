@@ -8,7 +8,7 @@ import * as moment from "moment";
   providedIn: 'root'
 })
 export class LoginService {
-  private url: string = 'http://localhost:3050/login'
+  private url: string = 'https://api.zoansoftware.com/login'
   constructor(private http: HttpClient,private router:Router) { }
   login(email: string, password: string): Observable<any> {
     return this.http.post(this.url, { email, password })
