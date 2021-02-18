@@ -3,25 +3,25 @@
     <div class="col s12 m12 l8 offset-l2">
       <div class="card horizontal z-depth-5">
         <div class="card-image">
-          <img src="http://zoansoftware.com:3050/img/carbon.png">
+          <img [(src)]="fotoProducto">
         </div>
         <div class="card-stacked">
           <div class="card-content">
-            <form class="col s12" [formGroup]="productEdit">
+            <form class="col s12" [formGroup]="productEdit" (ngSubmit)="updateProduct()">
               <div class="row">
                 <div class="input-field col s6">
                   <input id="codigo" formControlName="codigo" type="text" class="validate">
-                  <label for="codigo">Código</label>
+                  <label for="codigo" class="active">Código</label>
                 </div>
                 <div class="input-field col s6">
                   <input id="referencia" formControlName="referencia" type="text" class="validate">
-                  <label for="referencia">Referencia</label>
+                  <label class="active" for="referencia">Referencia</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s6">
                   <input id="nombre" formControlName="nombre" type="text" class="validate">
-                  <label for="nombre">Nombre del producto</label>
+                  <label class="active" for="nombre">Nombre del producto</label>
                 </div>
                 <div class="file-field input-field col s6">
                   <div class="btn-small">
@@ -36,17 +36,17 @@
               <div class="row">
                 <div class="input-field col s6">
                   <input id="ubicacion" formControlName="ubicacion" type="text" class="validate">
-                  <label for="ubicacion">Ubicación</label>
+                  <label class="active" for="ubicacion">Ubicación</label>
                 </div>
                 <div class="input-field col s6">
                   <input id="sede_bodega" formControlName="sede_bodega" type="text" class="validate">
-                  <label for="sede_bodega">Sede Bodega</label>
+                  <label class="active" for="sede_bodega">Sede Bodega</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <textarea id="descripcion" formControlName="descripcion" class="materialize-textarea"></textarea>
-                  <label for="descripcion">Descripción del producto</label>
+                  <label class="active" for="descripcion">Descripción del producto</label>
                 </div>
               </div>
               <div class="row center-align">
