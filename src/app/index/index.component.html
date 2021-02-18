@@ -14,15 +14,18 @@
             </thead>
 
             <tbody>
-              <tr *ngFor="let product of productos">
+              <tr *ngFor="let product of productos; let i=index">
                 <td>{{product.nombre}}</td>
                 <td class="right-align">
-                  <a routerLink="/producto/{{product.idproducts}}" class="btn-floating green espacio"><i class="material-icons">
+                  <a routerLink="/producto/{{product.idproducts}}" class="btn-floating green espacio"><i
+                      class="material-icons">
                       visibility
-                    </i></a>
-                    <a class="btn-floating red espacio"><i class="material-icons">
-                      delete
-                    </i></a>
+                    </i>
+                  </a>
+                  <a class="btn-floating red espacio" (click)="eliminarProducto(product.idproducts,i)"><i
+                    class="material-icons">
+                    delete
+                  </i></a>
                 </td>
               </tr>
             </tbody>

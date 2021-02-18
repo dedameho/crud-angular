@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       if (status == 'ok') {
         localStorage.setItem('token', res.token);
         localStorage.setItem('expiration', res.expires_at);
+        localStorage.setItem('rol',res.rol);
         this.router.navigate(['/']);
       } else {
         new Toast({

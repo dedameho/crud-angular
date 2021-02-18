@@ -46,7 +46,6 @@ export class ProductComponent implements OnInit {
   }
   seleccionarFoto(file:File){
     this.nuevaFoto=file[0];
-    console.log(this.productEdit.value.foto);
   }
   updateProduct(){
     var {codigo,referencia,nombre,ubicacion,sede_bodega,descripcion} = this.productEdit.value;
