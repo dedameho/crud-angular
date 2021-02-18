@@ -17,7 +17,7 @@
               <tr *ngFor="let product of productos">
                 <td>{{product.nombre}}</td>
                 <td class="right-align">
-                  <a class="btn-floating green espacio"><i class="material-icons">
+                  <a routerLink="/producto/{{product.idproducts}}" class="btn-floating green espacio"><i class="material-icons">
                       visibility
                     </i></a>
                     <a class="btn-floating blue espacio"><i class="material-icons">

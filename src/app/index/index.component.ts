@@ -13,7 +13,6 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
     this.products.getProducts().subscribe(res=>{
       this.productos=res;
-      console.log(this.productos)
     })
   }
 

@@ -14,7 +14,9 @@ import { SignupService } from './signup/signup.service';
 import { AuthGuard , GuardGuard } from './guard/auth.guard';
 import { AddComponent } from './add/add.component';
 import { TokenInterceptor } from './http.interceptor';
-import { IndexService } from './index/index.service'
+import { IndexService } from './index/index.service';
+import { ProductComponent } from './product/product.component'
+import { ProductService } from './product/product.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { IndexService } from './index/index.service'
     NavBarComponent,
     IndexComponent,
     SignupComponent,
-    AddComponent
+    AddComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { IndexService } from './index/index.service'
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [LoginService,SignupService,AuthGuard,GuardGuard,IndexService,{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
+  providers: [LoginService,SignupService,AuthGuard,GuardGuard,IndexService,ProductService,{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
